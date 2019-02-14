@@ -1,4 +1,4 @@
-## Sumário
+# Sumário
 
 - [Variáveis](#variáveis)
 - [Tipos de dados](#tipos-de-dados)
@@ -8,30 +8,30 @@
 - [Strings](#strings)
 - [Include e Require](#include-e-require)
 
-# Variáveis
+### Variáveis
 
 
 
-# Tipos de dados
+### Tipos de dados
 
 
 
-# Variáveis pre-definidas
+### Variáveis pre-definidas
 
 
 
-# Escopo de variáveis
+### Escopo de variáveis
 
 
 
-# Operadores
+### Operadores
 
 
 
-# Strings
+### Strings
 
 
 
-# Include e require
+### Include e require
 
 
