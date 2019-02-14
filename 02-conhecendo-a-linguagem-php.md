@@ -6,7 +6,7 @@
 - [escopo de variaveis](#escopo-de-variaveis)
 - [operadores](#operadores)
 - [strings](#strings)
-- [include e require](#include e require)
+- [include e require](#include-e-require)
 
 ## Variáveis
 
