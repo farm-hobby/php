@@ -83,6 +83,17 @@ var_dump($name)
 */
 ```
 
+Informa se a variável foi iniciada com `isset`
+
+```php
+$name = 'Daniel'
+
+isset($name)
+
+/* 
+    true/false
+*/
+```
 
 ### Comentários
 
@@ -102,6 +113,25 @@ Comentário multi-linha
 */
 
 $name = 'Daniel'
+```
+
+Concatenando strings em variáveis com o simbolo ponto (.)
+
+```php
+$name = 'Daniel'
+$surname = 'Simão'
+
+echo $name.$surname;
+echo $name . $surname;
+echo $name.' '.$surname;
+echo $name . ' ' . $surname;
+
+/* 
+    DanielSimão
+    DanielSimão
+    Daniel Simão
+    Daniel Simão
+*/
 ```
 
 ### Tipos de dados
