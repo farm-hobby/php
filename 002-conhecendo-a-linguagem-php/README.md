@@ -52,7 +52,42 @@ especiais (\/%-#)
 
     $nome1 = 'Daniel';
     $idade = 28;
-    
+
+    // Melhor
+    $nome = 'Daniel';
+
+```
+
+Não utilizar nomes de variáveis definidas pela linguagem,
+são conhecidas como **palavras revervadas**
+
+```php
+
+    // Palavra reversava
+    $this
+
+```
+
+### Comentários
+
+Comentário de uma linha
+
+```php
+
+    // criação da variável nome
+    $name = 'Daniel'
+
+```
+
+Comentário multi-linha
+
+```php
+
+    /*
+        criação da variável nome
+    */
+    $name = 'Daniel'
+
 ```
 
 ### Tipos de dados
