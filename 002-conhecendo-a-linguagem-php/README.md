@@ -136,7 +136,34 @@ echo $name . ' ' . $surname;
 
 ### Tipos de dados
 
+- Tipos básicos
+    - Integer
+    - String
+    - Float
+    - Boolean
+- Tipos Compostos
+    - Array
+    - Object
+- Tipos Especiais
+    - Resource
+    - Null
 
+##### Tipos Básicos
+
+```php
+// String
+$name = "Daniel";
+$site = "www.danielsimao.com.br";
+
+// Integer
+$ano = 1991;
+
+// Float
+$salario = 5500.99;
+
+// Boolean
+$bloqueado = false;
+```
 
 ### Variáveis pre-definidas
 
