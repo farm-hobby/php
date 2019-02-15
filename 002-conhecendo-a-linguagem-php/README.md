@@ -13,25 +13,22 @@
 As variaveis no PHP iniciam com cifrão ($) segue um exemplo
 
 ```php
-    $name = 'Daniel';
-
+$name = 'Daniel';
 ```
 
 Utilize camelCase para criar variaveis com palavras compostas
 
 ```php
-    $anoNascimento = 1991;
-    $nomeCompleto = 'Daniel Simão'
-
+$anoNascimento = 1991;
+$nomeCompleto = 'Daniel Simão'
 ```
 
 O PHP é case sensitive ou seja uma mesma variável com case diferente
 são variáveis diferentes
 
 ```php
-    $anoNascimento = 1991;
-    $AnonascimentO = 1991;
-
+$anoNascimento = 1991;
+$AnonascimentO = 1991;
 ```
 
 Na criação do nome da variável após o cifrão ($), não se pode 
@@ -39,26 +36,24 @@ iniciar os nomes das variáveis com números (0-9) ou com caracteres
 especiais (\/%-#)
 
 ```php
-    // Errado
-    $1nome = 'João';
-    $%idade = 25;
+// Errado
+$1nome = 'João';
+$%idade = 25;
 
-    // Certo
-    $nome1 = 'Daniel';
-    $idade = 28;
+// Certo
+$nome1 = 'Daniel';
+$idade = 28;
 
-    // Melhor
-    $nome = 'Daniel';
-
+// Melhor
+$nome = 'Daniel';
 ```
 
 Não utilizar nomes de variáveis definidas pela linguagem,
 são conhecidas como **palavras revervadas**
 
 ```php
-    // Palavra reversava
-    $this
-
+// Palavra reversava
+$this
 ```
 
 ### Comentários
@@ -66,19 +61,17 @@ são conhecidas como **palavras revervadas**
 Comentário de uma linha
 
 ```php
-    // criação da variável nome
-    $name = 'Daniel'
-
+// criação da variável nome
+$name = 'Daniel'
 ```
 
 Comentário multi-linha
 
 ```php
-    /*
-        criação da variável nome
-    */
-    $name = 'Daniel'
-
+/*
+    criação da variável nome
+*/
+$name = 'Daniel'
 ```
 
 ### Tipos de dados
