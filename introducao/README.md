@@ -4,7 +4,6 @@
 - [História do PHP](#história-do-php)
 - [A arquitetura Cliente-Servidor](#-a-arquitetura-cliente-servidor)
 
-
 # História do PHP
 
 - Rasmus Lerdorf (Criador do PHP)
@@ -18,8 +17,6 @@
 - versões mais conhecidas: 5.3, 5.4, 5.6
 - versão atual 7.x.x
 - ZEND possui certificação PHP
-
-
 
 # A arquitetura Cliente-Servidor
 
