@@ -53,6 +53,7 @@ são conhecidas como **palavras revervadas**
 
 ```php
 // Palavra reversava
+
 $this
 ```
 Limpando variáveis da memória com `unset`
@@ -70,6 +71,7 @@ Comentário de uma linha
 
 ```php
 // criação da variável nome
+
 $name = 'Daniel'
 ```
 
@@ -79,6 +81,7 @@ Comentário multi-linha
 /*
     criação da variável nome
 */
+
 $name = 'Daniel'
 ```
 
