@@ -40,12 +40,10 @@ especiais (\/%-#)
 
 ```php
     // Errado
-
     $1nome = 'João';
     $%idade = 25;
 
     // Certo
-
     $nome1 = 'Daniel';
     $idade = 28;
 
