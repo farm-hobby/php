@@ -148,7 +148,7 @@ echo $name . ' ' . $surname;
     - Resource
     - Null
 
-##### Tipos Básicos
+#### Tipos Básicos
 
 ```php
 // String
