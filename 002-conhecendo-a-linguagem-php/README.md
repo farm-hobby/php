@@ -63,7 +63,26 @@ $name = 'Daniel';
 $age = 28;
 
 unset($name, $age);
+
+/* 
+    Ocorrerá um erro e o php informará qual variável não foi definida
+*/
+
+echo $name
 ```
+
+Exibindo informações sobre a variável com `var_dump`, mostra o tipo, tamanho e valor contido
+
+```php
+$name = 'Daniel'
+
+var_dump($name)
+
+/* 
+    string(6) "Daniel"
+*/
+```
+
 
 ### Comentários
 
