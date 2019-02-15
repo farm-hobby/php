@@ -146,14 +146,14 @@ echo $name . ' ' . $surname;
     - Object
 - Tipos Especiais
     - Resource
-    - Null
+    - NULL
 
 #### Tipos Básicos
 
 ```php
 // String
 $name = "Daniel";
-$site = "www.danielsimao.com.br";
+$site = 'www.danielsimao.com.br';
 
 // Integer
 $ano = 1991;
@@ -163,6 +163,34 @@ $salario = 5500.99;
 
 // Boolean
 $bloqueado = false;
+```
+
+#### Tipos Básicos
+
+```php
+// Array
+$frutas = array('abacaxi', 'laranja', 'manga');
+var_dump($frutas);
+
+// Object
+$nascimento = new DateTime();
+var_dump($nascimento);
+```
+
+#### Tipos Especiais
+
+```php
+// Resource
+$arquivo = fopen('002-conhecendo-a-linguagem-php\002-tipos-de-dados.php', 'r');
+var_dump($arquivo);
+
+/*
+    NULL
+
+    Nulo é a ausência de valor
+    Vazio foi iniciado mas sem informação (reservado em memória)
+*/ 
+$nulo = NULL;
 ```
 
 ### Variáveis pre-definidas
