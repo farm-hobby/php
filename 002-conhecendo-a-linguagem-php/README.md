@@ -37,15 +37,15 @@ especiais (\/%-#)
 
 ```php
 // Errado
-$1nome = 'João';
-$%idade = 25;
+$1name = 'João';
+$%age = 25;
 
 // Certo
-$nome1 = 'Daniel';
-$idade = 28;
+$name1 = 'Daniel';
+$age = 28;
 
 // Melhor
-$nome = 'Daniel';
+$name = 'Daniel';
 ```
 
 Não utilizar nomes de variáveis definidas pela linguagem,
@@ -54,6 +54,14 @@ são conhecidas como **palavras revervadas**
 ```php
 // Palavra reversava
 $this
+```
+Limpando variáveis da memória com `unset`
+
+```php
+$name = 'Daniel';
+$age = 28;
+
+unset($name, $age);
 ```
 
 ### Comentários
