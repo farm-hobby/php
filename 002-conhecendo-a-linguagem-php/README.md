@@ -225,6 +225,17 @@ receber uma informação que deveria ser um inteiro podemos converte-lo da segui
 ?>
 ```
 
+Como coletar o script em execução no cliente e o IP da máquina do usuário
+
+```php
+<?php
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $script = $_SERVER['SCRIPT_NAME'];
+
+    var_dump($ip, $script);
+?>
+```
+
 A URL é dividida em várias partes chamadas URI, cada URI tem uma significancia,
 mas detalha uma URL de exemplo:
 
@@ -251,11 +262,74 @@ www.site.com.br
 
 ### Escopo de variáveis
 
+O escopo de variáveis no PHP funciona da seguinte forma,
+algo criar uma função na raiz de forma "global" e depois utilizarmos
+a mesma dentro de alguma função, ocorrerá um erro, porque ela não
+existe dentro do escopo da função criada, por exemplo:
 
+```php
+<?php
+$name = "Daniel";
+
+function sayMyName() {
+    echo $name; // Ocorrerá um erro Undefined variable: name
+}
+?>
+```
+
+Para conseguirmos utilizar variáveis globais dentro do escopo de
+funções, devemos utilizar a palavra reservada **global**
+
+```php
+<?php
+$name = "Daniel";
+
+function sayMyName() {
+    global $name;
+    echo $name; // Ocorrerá um erro Undefined variable: name
+}
+?>
+```
 
 ### Operadores
 
+##### Operadores de Atribuição
 
+- Atribuição = (Igual)
+- Concatenação . (Ponto)
+- Composto .= (Ponto e Igual)
+
+##### Operadores Aritméticos
+
+- Adição +
+- Subtração -
+- Multiplicação *
+- Divisão /
+- Modulo (Resto) %
+- Exponênciação **
+- Incremento ++ (++$num ou $num++)
+- Decremento -- (--$num ou $num--)
+
+##### Operadores de Comparação
+
+- Maior que >
+- Menor que <
+- Comparador de igualdade de valor == (= =)
+- Comparador de igualdade de valor e tipo === (= = =)
+- Comparador de diferente de valor != (! =)
+- Comparador de diferente de valor e tipo !== (! = =)
+
+##### Novos operadores PHP 7.x.x
+
+- Spaceship <=> (< = >) [1, 0, -1] (PHP 7.x.x)
+
+Caso o primeiro dado for maior retorna 1, caso seja igual zero,
+caso o segundo dado for maior retorna -1
+
+- Null Coalesce $a ?? $b ?? $c
+
+verifica se a primeira variável não é null, senão, retorna o seu valor, caso seja null
+vai para a proxima variável e repete o processo.
 
 ### Strings
 
