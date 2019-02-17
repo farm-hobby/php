@@ -314,16 +314,19 @@ function sayMyName() {
 
 - Maior que >
 - Menor que <
-- Comparador de igualdade de valor == (= =)
-- Comparador de igualdade de valor e tipo === (= = =)
-- Comparador de diferente de valor != (! =)
-- Comparador de diferente de valor e tipo !== (! = =)
+- Comparador de igualdade de valor ==
+- Comparador de igualdade de valor e tipo ===
+- Comparador de diferente de valor !=
+- Comparador de diferente de valor e tipo !==
+
+##### Operadores Lógicos
 
 ##### Novos operadores PHP 7.x.x
 
-- Spaceship <=> (< = >) [1, 0, -1] (PHP 7.x.x)
+- Spaceship $a <=> $b [1, 0, -1]
 
-Caso o primeiro dado for maior retorna 1, caso seja igual zero,
+Caso o primeiro dado for maior retorna 1,
+caso seja igual zero,
 caso o segundo dado for maior retorna -1
 
 - Null Coalesce $a ?? $b ?? $c
