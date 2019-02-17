@@ -321,6 +321,10 @@ function sayMyName() {
 
 ##### Operadores Lógicos
 
+- E && - $a && $b
+- OR || - $a || $b
+- NOT ! - !$a
+
 ##### Novos operadores PHP 7.x.x
 
 - Spaceship $a <=> $b [1, 0, -1]
