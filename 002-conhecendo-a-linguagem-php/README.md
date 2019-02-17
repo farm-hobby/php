@@ -31,7 +31,7 @@ $anoNascimento = 1991;
 $AnonascimentO = 1991;
 ```
 
-Na criação do nome da variável após o cifrão ($), não se pode 
+Na criação do nome da variável após o cifrão ($), não se pode
 iniciar os nomes das variáveis com números (0-9) ou com caracteres
 especiais (\/%-#)
 
@@ -64,7 +64,7 @@ $age = 28;
 
 unset($name, $age);
 
-/* 
+/*
     Ocorrerá um erro e o php informará qual variável não foi definida
 */
 
@@ -78,7 +78,7 @@ $name = 'Daniel'
 
 var_dump($name)
 
-/* 
+/*
     string(6) "Daniel"
 */
 ```
@@ -90,7 +90,7 @@ $name = 'Daniel'
 
 isset($name)
 
-/* 
+/*
     true/false
 */
 ```
@@ -126,7 +126,7 @@ echo $name . $surname;
 echo $name.' '.$surname;
 echo $name . ' ' . $surname;
 
-/* 
+/*
     DanielSimão
     DanielSimão
     Daniel Simão
@@ -189,12 +189,64 @@ var_dump($arquivo);
 
     Nulo é a ausência de valor
     Vazio foi iniciado mas sem informação (reservado em memória)
-*/ 
+*/
 $nulo = NULL;
 ```
 
 ### Variáveis pre-definidas
 
+As variáveis pre-definidas também são conhecidas como **Arrays Super Globais**
+ou **Variáveis Super Globais**, como exemplo temos:
+
+- $_GET
+- $_POST
+- $_SESSION
+- $_SERVER
+
+Vamos utilizar de exemplo o Array Super Global **$_GET**, para pegar informações
+enviadas pelo usuário:
+
+```php
+<?php
+    $name = $_GET["name"];
+
+    var_dump($name); // String(4) "Daniel"
+?>
+```
+
+Todas os dados retornas via GET e POST são strings, então, por exemplo caso quisermos
+receber uma informação que deveria ser um inteiro podemos converte-lo da seguinte forma:
+
+```php
+<?php
+    $age = (int)$_GET["age"];
+
+    var_dump($age); // int(28)
+?>
+```
+
+A URL é dividida em várias partes chamadas URI, cada URI tem uma significancia,
+mas detalha uma URL de exemplo:
+
+#### URL
+
+https://www.site.com.br?name=Daniel&age=28#origin
+
+#### PROTOCOLO
+
+https
+
+#### DOMINIO
+
+www.site.com.br
+
+#### QUERY STRING
+
+?name=Daniel&age=28
+
+#### HASH
+
+\#origin
 
 
 ### Escopo de variáveis
