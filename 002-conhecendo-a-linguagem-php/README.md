@@ -340,8 +340,47 @@ vai para a proxima variável e repete o processo.
 
 ### Strings
 
+Qual a diferença entre aspas duplas e aspas simples,
+nas aspas duplas se colocarmos uma variável dentro da string sem concatenar
+o php procura o valor dessa variável e interpola no lugar da váriaveis, por exemplo:
 
+```php
+<?php
+    $name = 'Daniel';
+
+    $frase = "O $name é foda!";
+
+    $frase2 = 'O $name é foda!';
+?>
+```
+
+##### Métodos String
+
+- strtoupper(String) - Torna a String Maiuscula
+- strtolower(String) - Torna a String Minúscula
+- ucwords(String) - Deixa todas as palabras capitalizadas
+- ucfirst(String) - Deixa apenas a primeira palavra capitalizada
+- str_replate(SubstringTarget, SubstringToChange, String) - Substitui uma substring em uma string
+- strpos(String, Substring) - Pega o index de certa substring
+- substr(String, Index) - Pega uma Substring
+- strlen(String) - Pega o comprimento da String
 
 ### Include e require
 
+##### require
 
+Obriga que o arquivo existe e esteja funcionando corretamente, pois
+pode gerar um erro fatal e para a execução do código.
+
+##### include
+
+Tenta funcionar mesmo que o arquivo não exista ou esteja com algum tipo de problema,
+também pode trazer arquivos do **include path**, é configurado no php.ini, caso ele
+não encontrar um modulo específico ele procura no **include path** configurado.
+
+##### require_once ou inclide_once
+
+inclui apenas uma vez o arquivo especificado.
+
+
+- No PHP7 todo erro se torna execeção para ser tratado com try/catch
