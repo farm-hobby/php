@@ -26,13 +26,13 @@
 4) O Servidor devolver uma Resposta (Response)
 5) O Cliente (Browser) recebe a Resposta (Response)
 
-#### Esquema
+### Esquema
 
 **Requisição**: `Cliente ----- Request -----> Servidor`
 
 **Resposta**: `Cliente <---- Response ----- Servidor`
 
-#### Portas Web e Banco de dados:
+### Portas Web e Banco de dados:
 
 - Portas reservadas para servidor web são: 80/443
 - Porta para MySQL 3306 com permissão do Firewall
