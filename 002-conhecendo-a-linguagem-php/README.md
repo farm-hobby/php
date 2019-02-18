@@ -313,7 +313,7 @@ function sayMyName() {
 - Maior que **>**
 - Menor que **<**
 - Comparador de igualdade de valor **==**
-- Comparador de igualdade de valor e tipo** ===**
+- Comparador de igualdade de valor e tipo **===**
 - Comparador de diferente de valor **!=**
 - Comparador de diferente de valor e tipo **!==**
 
