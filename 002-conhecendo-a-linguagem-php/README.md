@@ -209,7 +209,6 @@ enviadas pelo usuário:
 ```php
 <?php
     $name = $_GET["name"];
-
     var_dump($name); // String(4) "Daniel"
 ?>
 ```
@@ -220,7 +219,6 @@ receber uma informação que deveria ser um inteiro podemos converte-lo da segui
 ```php
 <?php
     $age = (int)$_GET["age"];
-
     var_dump($age); // int(28)
 ?>
 ```
@@ -239,23 +237,23 @@ Como coletar o script em execução no cliente e o IP da máquina do usuário
 A URL é dividida em várias partes chamadas URI, cada URI tem uma significancia,
 mas detalha uma URL de exemplo:
 
-#### URL
+##### URL
 
 https://www.site.com.br?name=Daniel&age=28#origin
 
-#### PROTOCOLO
+##### PROTOCOLO
 
 https
 
-#### DOMINIO
+##### DOMINIO
 
 www.site.com.br
 
-#### QUERY STRING
+##### QUERY STRING
 
 ?name=Daniel&age=28
 
-#### HASH
+##### HASH
 
 \#origin
 
@@ -350,20 +348,28 @@ o php procura o valor dessa variável e interpola no lugar da váriaveis, por ex
 
     $frase = "O $name é foda!";
 
+    echo $frase;
+
+    echo '<br>'; // O Daniel é foda!
+
     $frase2 = 'O $name é foda!';
+
+    echo $frase2; // O $name é foda!
+
+    echo '<br>';
 ?>
 ```
 
 ##### Métodos String
 
-- strtoupper(String) - Torna a String Maiuscula
-- strtolower(String) - Torna a String Minúscula
-- ucwords(String) - Deixa todas as palabras capitalizadas
-- ucfirst(String) - Deixa apenas a primeira palavra capitalizada
-- str_replate(SubstringTarget, SubstringToChange, String) - Substitui uma substring em uma string
-- strpos(String, Substring) - Pega o index de certa substring
-- substr(String, Index) - Pega uma Substring
-- strlen(String) - Pega o comprimento da String
+- **strtoupper**(String) - Torna a String Maiuscula
+- **strtolower**(String) - Torna a String Minúscula
+- **ucwords**(String) - Deixa todas as palabras capitalizadas
+- **ucfirst**(String) - Deixa apenas a primeira palavra capitalizada
+- **str_replate**(SubstringTarget, SubstringToChange, String) - Substitui uma substring em uma string
+- **strpos**(String, Substring) - Pega o index de certa substring
+- **substr**(String, Index) - Pega uma Substring
+- **strlen**(String) - Pega o comprimento da String
 
 ### Include e require
 
@@ -378,7 +384,7 @@ Tenta funcionar mesmo que o arquivo não exista ou esteja com algum tipo de prob
 também pode trazer arquivos do **include path**, é configurado no php.ini, caso ele
 não encontrar um modulo específico ele procura no **include path** configurado.
 
-##### require_once ou inclide_once
+##### require_once ou include_once
 
 inclui apenas uma vez o arquivo especificado.
 
