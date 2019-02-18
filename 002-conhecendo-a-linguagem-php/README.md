@@ -301,10 +301,10 @@ function sayMyName() {
 
 - Adição **+**
 - Subtração **-**
-- Multiplicação *****
+- Multiplicação **\***
 - Divisão **/**
 - Modulo (Resto) **%**
-- Exponênciação ******
+- Exponênciação **\*\***
 - Incremento **++** (++$num ou $num++)
 - Decremento **--** (--$num ou $num--)
 
