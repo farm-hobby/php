@@ -2,7 +2,7 @@
 #### Sumario
 
 - [História do PHP](#história-do-php)
-- [A arquitetura Cliente-Servidor](#-a-arquitetura-cliente-servidor)
+- [A arquitetura Cliente-Servidor](#a-arquitetura-cliente-servidor)
 
 # História do PHP
 
