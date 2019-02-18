@@ -293,45 +293,45 @@ function sayMyName() {
 
 ##### Operadores de Atribuição
 
-- Atribuição = (Igual)
-- Concatenação . (Ponto)
-- Composto .= (Ponto e Igual)
+- Atribuição **=** (Igual)
+- Concatenação **.** (Ponto)
+- Composto **.=** (Ponto e Igual)
 
 ##### Operadores Aritméticos
 
-- Adição +
-- Subtração -
-- Multiplicação *
-- Divisão /
-- Modulo (Resto) %
-- Exponênciação **
-- Incremento ++ (++$num ou $num++)
-- Decremento -- (--$num ou $num--)
+- Adição **+**
+- Subtração **-**
+- Multiplicação *****
+- Divisão **/**
+- Modulo (Resto) **%**
+- Exponênciação ******
+- Incremento **++** (++$num ou $num++)
+- Decremento **--** (--$num ou $num--)
 
 ##### Operadores de Comparação
 
-- Maior que >
-- Menor que <
-- Comparador de igualdade de valor ==
-- Comparador de igualdade de valor e tipo ===
-- Comparador de diferente de valor !=
-- Comparador de diferente de valor e tipo !==
+- Maior que **>**
+- Menor que **<**
+- Comparador de igualdade de valor **==**
+- Comparador de igualdade de valor e tipo** ===**
+- Comparador de diferente de valor **!=**
+- Comparador de diferente de valor e tipo **!==**
 
 ##### Operadores Lógicos
 
-- E && - $a && $b
-- OR || - $a || $b
-- NOT ! - !$a
+- **E** && - $a && $b
+- **OR** || - $a || $b
+- **NOT** ! - !$a
 
 ##### Novos operadores PHP 7.x.x
 
-- Spaceship $a <=> $b [1, 0, -1]
+- **Spaceship** $a <=> $b [1, 0, -1]
 
 Caso o primeiro dado for maior retorna 1,
 caso seja igual zero,
 caso o segundo dado for maior retorna -1
 
-- Null Coalesce $a ?? $b ?? $c
+- **Null Coalesce** $a ?? $b ?? $c
 
 verifica se a primeira variável não é null, senão, retorna o seu valor, caso seja null
 vai para a proxima variável e repete o processo.
