@@ -293,29 +293,29 @@ function sayMyName() {
 
 ##### Operadores de Atribuição
 
-- Atribuição **=** (Igual)
-- Concatenação **.** (Ponto)
-- Composto **.=** (Ponto e Igual)
+- Atribuição = (Igual)
+- Concatenação . (Ponto)
+- Composto .=, +=, -=, /=, *=  (Ponto ou outro simbolo e Igual)
 
 ##### Operadores Aritméticos
 
-- Adição **+**
-- Subtração **-**
-- Multiplicação **\***
-- Divisão **/**
-- Modulo (Resto) **%**
-- Exponênciação **\*\***
-- Incremento **++** (++$num ou $num++)
-- Decremento **--** (--$num ou $num--)
+- Adição +
+- Subtração -
+- Multiplicação *
+- Divisão /
+- Modulo (Resto) %
+- Exponênciação **
+- Incremento ++ (++$num ou $num++)
+- Decremento -- (--$num ou $num--)
 
 ##### Operadores de Comparação
 
-- Maior que **>**
-- Menor que **<**
-- Comparador de igualdade de valor **==**
-- Comparador de igualdade de valor e tipo **===**
-- Comparador de diferente de valor **!=**
-- Comparador de diferente de valor e tipo **!==**
+- Maior que >
+- Menor que <
+- Comparador de igualdade de valor ==
+- Comparador de igualdade de valor e tipo ===
+- Comparador de diferente de valor !=
+- Comparador de diferente de valor e tipo !==
 
 ##### Operadores Lógicos
 
