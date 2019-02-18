@@ -373,18 +373,18 @@ o php procura o valor dessa variável e interpola no lugar da váriaveis, por ex
 
 ### Include e require
 
-##### require
+#### require
 
 Obriga que o arquivo existe e esteja funcionando corretamente, pois
 pode gerar um erro fatal e para a execução do código.
 
-##### include
+#### include
 
 Tenta funcionar mesmo que o arquivo não exista ou esteja com algum tipo de problema,
 também pode trazer arquivos do **include path**, é configurado no php.ini, caso ele
 não encontrar um modulo específico ele procura no **include path** configurado.
 
-##### require_once ou include_once
+#### require_once ou include_once
 
 inclui apenas uma vez o arquivo especificado.
 
