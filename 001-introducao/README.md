@@ -29,6 +29,7 @@
 #### Esquema
 
 **Requisição**: `Cliente ----- Request -----> Servidor`
+
 **Resposta**: `Cliente <---- Response ----- Servidor`
 
 #### Portas Web e Banco de dados:
