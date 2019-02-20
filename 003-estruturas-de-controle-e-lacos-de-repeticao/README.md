@@ -4,7 +4,7 @@
 - [Switch Case](#switch-case)
 - [For](#for)
 - [Foreach](#foreach)
-- [While](#while)
+- [While](#while-and-do-while)
 
 ### Estruturas Condicionais
 
@@ -150,6 +150,6 @@ O Do While avalia as condições da mesma forma que o While, porém ele verifica
     do {
         echo $number;
         $number--;
-    } ($number > 0);
+    } while ($number > 0);
 ?>
 ```
