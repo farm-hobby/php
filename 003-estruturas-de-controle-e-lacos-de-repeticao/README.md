@@ -4,7 +4,7 @@
 - [Switch Case](#switch-case)
 - [For](#for)
 - [Foreach](#foreach)
-- [While](#while-and-do-while)
+- [While and Do While](#while-and-do-while)
 
 ### Estruturas Condicionais
 
