@@ -2,7 +2,7 @@
 #### Sumario
 
 - [História do PHP](#história-do-php)
-- [A arquitetura Cliente-Servidor](#-a-arquitetura-cliente-servidor)
+- [A arquitetura Cliente-Servidor](#a-arquitetura-cliente-servidor)
 
 # História do PHP
 
@@ -20,18 +20,19 @@
 
 # A arquitetura Cliente-Servidor
 
-- 1) O Cliente acessa um endereço de um site
-- 2) O Cliente (Browser) faz uma Requisição (Request) para um Servidor
-- 3) O Servidor verifica as permissões
-- 4) O Servidor devolver uma Resposta (Response)
-- 5) O Cliente (Browser) recebe a Resposta (Response)
+1) O Cliente acessa um endereço de um site
+2) O Cliente (Browser) faz uma Requisição (Request) para um Servidor
+3) O Servidor verifica as permissões
+4) O Servidor devolver uma Resposta (Response)
+5) O Cliente (Browser) recebe a Resposta (Response)
 
-#### Esquema
+### Esquema
 
 **Requisição**: `Cliente ----- Request -----> Servidor`
+
 **Resposta**: `Cliente <---- Response ----- Servidor`
 
-#### Portas Web e Banco de dados:
+### Portas Web e Banco de dados:
 
 - Portas reservadas para servidor web são: 80/443
 - Porta para MySQL 3306 com permissão do Firewall
