@@ -15,7 +15,7 @@ Variáveis locais:
 
 Variáveis de sessão:
 
-    - São vistas por todo o código enquanto o usuário estiver conectado no nosso site, 
+    - São vistas por todo o código enquanto o usuário estiver conectado no nosso site,
       se parecem com variáveis super globais;
 
 ##### Iniciando sessões
@@ -37,8 +37,8 @@ a em todo arquivo que iremos utilziar sessions.
 
 Para apagar as varáveis de sessões temos 2 métodos com funções diferentes:
 
-- O método `session_unset()` sem indicar uma variável apaga todas as variáveis configuradas;
-- O método `session_unset($_SESSION["nome"])` apaga a variável indicada, porém mantêm o usuário ativado;
+- O método `session_unset()` sem indicar uma variável apaga todas as variáveis configuradas e mantêm o usuário ativo;
+- O método `unset($_SESSION["nome"])` apaga a variável indicada;
 - O método `session_destroy()` destroy as variáveis e remove o usuário da sessão;
 
 ### ID de sessões
