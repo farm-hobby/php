@@ -10,13 +10,12 @@ diferença entre variaveis locais e de sessão:
 
 Variáveis locais:
 
-    - Podem ser utilizadas dentro do próprio módulo em que foram criadas;
-    - Podemos acessar variáveis de módulos importados;
+- Podem ser utilizadas dentro do próprio módulo em que foram criadas;
+- Podemos acessar variáveis de módulos importados;
 
 Variáveis de sessão:
 
-    - São vistas por todo o código enquanto o usuário estiver conectado no nosso site,
-      se parecem com variáveis super globais;
+- São vistas por todo o código enquanto o usuário estiver conectado no nosso site, se parecem com variáveis super globais;
 
 ##### Iniciando sessões
 
