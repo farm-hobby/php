@@ -25,7 +25,7 @@ toda vez que for trabalhar com sessões é necessário fazer uso desse método;
 ##### Configurando sessões
 
 As sessões são como arrays super globais, então elas tem a mesma notação
-que `$_GET` e `$_SERVER`, ou seja, utilizaremos a sintax: `$_SESSION`;
+que `$_GET` e `$_SERVER`, ou seja, utilizaremos a syntax: `$_SESSION`;
 
 ##### Criando arquivo de configuração
 
