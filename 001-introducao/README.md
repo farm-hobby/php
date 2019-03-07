@@ -23,7 +23,7 @@
 1) O Cliente acessa um endereço de um site
 2) O Cliente (Browser) faz uma Requisição (Request) para um Servidor
 3) O Servidor verifica as permissões
-4) O Servidor devolver uma Resposta (Response)
+4) O Servidor devolve uma Resposta (Response)
 5) O Cliente (Browser) recebe a Resposta (Response)
 
 ### Esquema

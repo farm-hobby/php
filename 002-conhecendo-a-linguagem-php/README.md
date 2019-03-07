@@ -165,7 +165,7 @@ $salario = 5500.99;
 $bloqueado = false;
 ```
 
-#### Tipos Básicos
+#### Tipos Compostos
 
 ```php
 // Array
