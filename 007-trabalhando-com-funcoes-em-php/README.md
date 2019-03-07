@@ -135,9 +135,9 @@ utilizamos 3 pontos (...) para funcionar;
 <?php
     $mailPieses = Array();
 
-    $mainPieces[] = 'to: test@gmail.com';
-    $mainPieces[] = 'from: author@gmail.com';
-    $mainPieces[] = 'subject: test 1';
+    $mailPieses[] = 'to: test@gmail.com';
+    $mailPieses[] = 'from: author@gmail.com';
+    $mailPieses[] = 'subject: test 1';
 
     mail(...$mailPieces);
 ?>
