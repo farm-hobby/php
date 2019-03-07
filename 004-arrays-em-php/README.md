@@ -2,7 +2,6 @@
 
 - [Arrays em PHP](#arrays-em-php)
 - [JSON](#json)
-- [Constantes e Array Constantes](#constantes-e-array-constantes)
 
 ### Array em PHP
 
@@ -12,10 +11,6 @@ Como criamos um Array:
 <?php
     $frutas = array('laranja', 'pera', 'maçã');
 
-    /*
-        Utilizando o método `print_r()` conseguimos ver as informações
-        do array de forma legível, ou de qualquer variável
-    */
     print_r($frutas);
 ?>
 ```
@@ -88,8 +83,3 @@ a última posição do array:
 
 ?>
 ```
-
-### Constantes e Array Constantes
-
-
-
