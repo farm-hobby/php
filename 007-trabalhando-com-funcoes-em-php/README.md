@@ -63,7 +63,48 @@ como um Array.
 
 ### Parâmetros por Valor X Referência
 
+##### Parâmetros por valor
 
+Como o parâmetro é criado no escopo da função, o valor recebido é uma cópia, ou seja, 
+caso alterarmos o valor do parâmetro a variável externa não sofrerá nenhuma alteração/modificação
+
+```php
+<?php 
+    $year = 1991;
+
+    function incrementYear($year) {
+        return ++$year;
+    }
+
+    $newYear = incrementYear($year);
+
+    echo $year;
+    echo $newYear;
+?>
+```
+
+##### Parâmetros por referência
+
+Conseguimos alterar a fonte original passada por parêmetro se informarmos para a função que
+queremos passar o valor como **referência**, para fazer isso devemos adicionar um `&` (E comercial) como prefixo
+da variável desejada.
+
+```php
+<?php 
+    $year = 1991;
+
+    function incrementYear(&$year) {
+        return ++$year;
+    }
+
+    $newYear = incrementYear($year);
+
+    echo $year;
+    echo '<br>';
+    echo $newYear;
+
+?>
+```
 
 ### Funções no PHP 7 Novidades
 

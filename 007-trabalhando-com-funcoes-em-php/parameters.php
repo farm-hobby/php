@@ -14,8 +14,12 @@
     }
 
     var_dump(greet2());
+
     echo '<br>';
+
     var_dump(greet2("Good", "Morning"));
+
     echo '<br>';
+    
     var_dump(greet2('String', [], 10, 15.2, false));
 ?>
