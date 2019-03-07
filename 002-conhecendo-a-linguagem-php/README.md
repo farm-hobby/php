@@ -213,7 +213,7 @@ enviadas pelo usuário:
 ?>
 ```
 
-Todas os dados retornas via GET e POST são strings, então, por exemplo caso quisermos
+Todas os dados retornados via GET e POST são strings, então, por exemplo caso quisermos
 receber uma informação que deveria ser um inteiro podemos converte-lo da seguinte forma:
 
 ```php
@@ -234,8 +234,8 @@ Como coletar o script em execução no cliente e o IP da máquina do usuário
 ?>
 ```
 
-A URL é dividida em várias partes chamadas URI, cada URI tem uma significancia,
-mas detalha uma URL de exemplo:
+A URL é dividida em várias partes chamadas URI, cada URI tem uma significância,
+segue detalhe de uma URL de exemplo:
 
 ##### URL
 
@@ -261,7 +261,7 @@ www.site.com.br
 ### Escopo de variáveis
 
 O escopo de variáveis no PHP funciona da seguinte forma,
-algo criar uma função na raiz de forma "global" e depois utilizarmos
+ao criar uma função na raiz de forma "global" e depois utilizarmos
 a mesma dentro de alguma função, ocorrerá um erro, porque ela não
 existe dentro do escopo da função criada, por exemplo:
 
@@ -327,9 +327,9 @@ function sayMyName() {
 
 - **Spaceship** $a <=> $b [1, 0, -1]
 
-Caso o primeiro dado for maior retorna 1,
-caso seja igual zero,
-caso o segundo dado for maior retorna -1
+Caso o primeiro dado for maior, retorna 1,
+caso seja igual, retorna 0,
+caso o segundo dado for maior, retorna -1
 
 - **Null Coalesce** $a ?? $b ?? $c
 
@@ -366,7 +366,7 @@ o php procura o valor dessa variável e interpola no lugar da váriaveis, por ex
 - **strtolower**(String) - Torna a String Minúscula
 - **ucwords**(String) - Deixa todas as palabras capitalizadas
 - **ucfirst**(String) - Deixa apenas a primeira palavra capitalizada
-- **str_replate**(SubstringTarget, SubstringToChange, String) - Substitui uma substring em uma string
+- **str_replace**(SubstringTarget, SubstringToChange, String) - Substitui uma substring em uma string
 - **strpos**(String, Substring) - Pega o index de certa substring
 - **substr**(String, Index) - Pega uma Substring
 - **strlen**(String) - Pega o comprimento da String
@@ -389,4 +389,4 @@ não encontrar um modulo específico ele procura no **include path** configurado
 inclui apenas uma vez o arquivo especificado.
 
 
-- No PHP7 todo erro se torna execeção para ser tratado com try/catch
+- No PHP7 todo erro se torna exceção para ser tratado com try/catch
