@@ -143,7 +143,7 @@ utilizamos 3 pontos (...) para funcionar;
 ?>
 ```
 
-#### Return Type Declarations
+##### Return Type Declarations
 
 ```php
 <?php 
