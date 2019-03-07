@@ -9,11 +9,57 @@
 
 ### Criando funções de usuário
 
+A estrutura das funções contém, a palara reservada `function`, seu nome, um par de parenteses, chaves de abertura/encerramento, e dentro pode haver um valor de retorno com a palavra reservava `return`;
 
+```php
+<?php 
+    function greeting() {
+        return 'Hello!';
+    }
+
+    echo greeting();
+?>
+```
 
 ### Parâmetros de funções
 
+Dentro dos parênteses podemos informar `parâmetros`, esses parâmetros podem ser obrigatórios
+ou opcionais para o funcionamento das funções, os parâmetros também podem ter valores padrão:
 
+```php
+<?php 
+    function greet($text = 'World', $period = 'Good Morning') {
+        return 'Hello '.$text.', '.$period.'! <br>'; 
+    }
+
+    echo greet('Everyone', 'Good Night');
+    echo greet('Everyone');
+    echo greet('', '');
+?>
+```
+
+Dica: parâmetros que não possuem valores padrão, sempre a esquerda!
+
+
+### Parâmetros como Array
+
+Nas funções do PHP conseguimos pegar todos os parâmetros informados em sua chamada,
+sem especifica-los, utilizando o método `func_get_args()`. Recuperando todos os argumentos
+como um Array.
+
+```php
+<?php 
+    function greet() {
+        $args = func_get_args();
+
+        return $args;
+    }
+
+    var_dump(greet());
+    var_dump(greet("Good", "Morning"));
+    var_dump(greet('String', [], 10, 15.2, false));
+?>
+```
 
 ### Parâmetros por Valor X Referência
 

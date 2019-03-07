@@ -5,8 +5,8 @@
 
 ### Contantes
 
-Constante não podem ser alteradas para cria-las utilizamos um método
-chamado `define()`, que recebe 2 parametros o nome e o valor, e há um 3º parametro
+Constante não podem ser alteradas, para cria-las utilizamos um método
+chamado `define()`, que recebe 2 parâmetros (nome e valor), e há um 3º parametro
 optional para habilitar o modo case insensitive:
 
 ```php

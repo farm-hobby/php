@@ -30,11 +30,11 @@ que `$_GET` e `$_SERVER`, ou seja, utilizaremos a syntax: `$_SESSION`;
 ##### Criando arquivo de configuração
 
 Pdemos criar um arquivo de configuração chamado `config.php` para não termos que reescrever
-a em todo arquivo que iremos utilziar sessions.
+a em todo arquivo que iremos utilizar sessions.
 
 ##### Apagando variáveis de sessão
 
-Para apagar as varáveis de sessões temos 2 métodos com funções diferentes:
+Para apagar as variáveis de sessões temos 2 métodos com funções diferentes:
 
 - O método `session_unset()` sem indicar uma variável apaga todas as variáveis configuradas e mantêm o usuário ativo;
 - O método `unset($_SESSION["nome"])` apaga a variável indicada;
