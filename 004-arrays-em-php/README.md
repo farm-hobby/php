@@ -22,7 +22,7 @@ do array de forma legível, ou de qualquer variável
 <?php
     print_r($frutas);
 
-    //Array ( [0] => laranja [1] => maçã [2] => pêra )
+    // Array ( [0] => laranja [1] => maçã [2] => pêra )
 ?>
 ```
 
