@@ -108,7 +108,52 @@ da variável desejada.
 
 ### Funções no PHP 7 Novidades
 
+##### Splat Operator
 
+Utilizando na construção de funções podemos pegar parametros direto como um Array 
+e conseguimos também definir o tipo dos dados inseridos neste Array, esse operador é conhecido como `Variadic Functions`,
+utilizamos 3 pontos (...) para funcionar.
+
+```php
+<?php 
+    function makePhrase(...$sentences) {
+        $string = '';
+
+        foreach($sentences as $value) {
+            $string .= $string.' ';
+        }
+
+        return $string;
+    }
+?>
+```
+
+Podemos também separar os dados de um Array e passar como parâmetros de algum função, este operador é conhecido como `Argument Unpacking`,
+utilizamos 3 pontos (...) para funcionar;
+
+```php
+<?php
+    $mailPieses = Array();
+
+    $mainPieces[] = 'to: test@gmail.com';
+    $mainPieces[] = 'from: author@gmail.com';
+    $mainPieces[] = 'subject: test 1';
+
+    mail(...$mailPieces);
+?>
+```
+
+#### Return Type Declarations
+
+```php
+<?php 
+    function getFullName(string $firstname, string $lastname):string {
+        return $firstname . ' ' . $lastname;
+    }
+
+    echo getFullName('Daniel', 'Simão');
+?>
+```
 
 ### Funções Recursivas
 
