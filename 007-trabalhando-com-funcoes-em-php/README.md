@@ -162,29 +162,29 @@ em uma estrutura em forma de árvore, veja um exemplo:
 
 ```php
 <?php 
-    $hierarquia = [
+    $hierarquia = array(
         [
             'cargo' => 'CEO',
-            'subordinados' => [
+            'subordinados' => array(
                 [
                     'cargo' => 'Diretor Comercial',
-                    'subordinados' => [
+                    'subordinados' => array(
                         [
                             'cargo' => 'Gerente de Vendas'
                         ]
-                    ]
+                    )
                 ],
                 [
                     'cargo' => 'Diretor Vendas',
-                    'subordinados' => [
+                    'subordinados' => array(
                         [
                             'cargo' => 'Gerente de Contas a Pagar'
                         ]
-                    ]
+                    )
                 ]
-            ]
+            )
         ]
-    ];
+    );
 
     function cargoTree($funcoes) {
         
