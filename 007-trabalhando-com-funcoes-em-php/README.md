@@ -215,6 +215,37 @@ em uma estrutura em forma de árvore, veja um exemplo:
 
 ### Funções Anônimas
 
+Funções anonimas são utilizadas como valores em parâmetros e variáveis, 
+são normalmente camadas após algum processo assincrono.
 
+##### Funções como parâmetros
+
+```php
+<?php 
+
+    function doAsync($callback) {
+        $callback();
+    }
+
+    doAsync(function() {
+        echo "Terminou!";
+    });
+
+?>
+```
+
+##### Funções como variáveis
+
+```php
+<?php 
+
+    $fn = function ($param) {
+        var_dump($param)
+    };
+
+    $fn('String');
+
+?>
+```
 
 
