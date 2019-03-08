@@ -157,7 +157,61 @@ utilizamos 3 pontos (...) para funcionar;
 
 ### Funções Recursivas
 
+É uma função que chama ela mesma caso seja necessário repetir o mesmo procedimento
+em uma estrutura em forma de árvore, veja um exemplo:
 
+```php
+<?php 
+    $hierarquia = [
+        [
+            'cargo' => 'CEO',
+            'subordinados' => [
+                [
+                    'cargo' => 'Diretor Comercial',
+                    'subordinados' => [
+                        [
+                            'cargo' => 'Gerente de Vendas'
+                        ]
+                    ]
+                ],
+                [
+                    'cargo' => 'Diretor Vendas',
+                    'subordinados' => [
+                        [
+                            'cargo' => 'Gerente de Contas a Pagar'
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ];
+
+    function cargoTree($funcoes) {
+        
+        $html = '<ul>';
+        
+        foreach($funcoes as $funcao) {
+
+            $html .= '<li>';
+
+            $html .= $funcao['cargo'];
+
+            if (isset($funcao['subordinados']) && count($funcao['subordinados']) > 0) {
+                $html .= cargoTree($funcao['subordinados']);
+            }
+
+            $html .= '</li>';
+
+        }
+
+        $html .= '</ul>'; 
+
+        return $html;
+    }
+
+    echo cargoTree($hierarquia);
+?>
+```
 
 ### Funções Anônimas
 
