@@ -1,4 +1,5 @@
 # php-daily-book
+
 A personal daily book with the purpose to track my learning
 
 - [Introdução](001-introducao/README.md)
@@ -8,3 +9,4 @@ A personal daily book with the purpose to track my learning
 - [Constantes e Array Contantes](005-constantes-e-array-constantes/README.md)
 - [Sessões](006-sessoes/README.md)
 - [Trabalhando com funções em PHP](007-trabalhando-com-funcoes-em-php/README.md)
+- [Trabalhando com Date e Hora no PHP](008-trabalhando-com-date-e-hora-no-php/README.md)
