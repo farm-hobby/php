@@ -79,6 +79,38 @@ o dia de hoje, ou 1 semana depois
 
 ### Definindo a configuração regional com setlocale
 
+Para definir as configurações de data e hora locais utilziamos o método
+`setlocale` da seguinte forma:
 
+```php
+<?php 
+    setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
+?>
+```
+
+Agora para trabalharmos com data/hora formatadas conforme as configurações locais,
+utilizamos o método `strftime`, que recebe uma string com a formatação e um timestampe 
+em em segundos (igual o strtotime, a diferença esta apenas na string passada
+como formato), veja um exemplo:
+
+```php
+<?php
+    setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
+
+    echo strftime('%A %B'); // segunda-feira dezembro
+?>
+```
 
 ### Classe DateTime
+
+Definindo data e hora com DateTime
+
+```php
+<?php 
+
+    $dt = new DateTime();
+
+    echo $dt->format('d/m/Y H:i:s');
+
+?>
+```
