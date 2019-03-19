@@ -18,19 +18,23 @@
 Uma `Classe` é um conjunto de `atributos` e `métodos`, a partir da **Classe**
 **instanciamos objetos** através da palavra chave **new**, usaremos a **Classe** como **modelo** para criar a **estrutura** desses **objetos**.
 
-```php
-<?php
-
-?>
-```
-
 ### Criando um a Classe
 
-texto
-
 ```php
 <?php
 
+    class Person {
+
+        public $name;
+
+        public function talk() {
+            return 'My name\'s '.$this->name;
+        }
+    }
+
+    $me = new Person();
+    $me->name = 'Daniel Simão';
+    echo $me->talk();
 ?>
 ```
 
