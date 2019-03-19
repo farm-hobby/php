@@ -15,7 +15,7 @@
 
 ### Conceitos de OOP
 
-Uma **Classe** é um conjunto de **atributos** e **métodos**, a partir da **Classe**
+Uma `Classe` é um conjunto de `atributos` e `métodos`, a partir da **Classe**
 **instanciamos objetos** através da palavra chave **new**, usaremos a **Classe** como **modelo** para criar a **estrutura** desses **objetos**.
 
 ```php
