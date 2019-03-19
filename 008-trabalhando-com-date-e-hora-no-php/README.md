@@ -83,13 +83,13 @@ Para definir as configurações de data e hora locais utilziamos o método
 `setlocale` da seguinte forma:
 
 ```php
-<?php 
+<?php
     setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'portuguese');
 ?>
 ```
 
 Agora para trabalharmos com data/hora formatadas conforme as configurações locais,
-utilizamos o método `strftime`, que recebe uma string com a formatação e um timestampe 
+utilizamos o método `strftime`, que recebe uma string com a formatação e um timestampe
 em em segundos (igual o strtotime, a diferença esta apenas na string passada
 como formato), veja um exemplo:
 
@@ -106,9 +106,15 @@ como formato), veja um exemplo:
 Definindo data e hora com DateTime
 
 ```php
-<?php 
+<?php
 
     $dt = new DateTime();
+
+    $interval = new DateInterval('P15D');
+
+    echo $dt->format('d/m/Y H:i:s');
+
+    $dt->add($interval);
 
     echo $dt->format('d/m/Y H:i:s');
 
