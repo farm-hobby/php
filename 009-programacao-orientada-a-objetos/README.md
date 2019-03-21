@@ -292,13 +292,28 @@ uma string, por exemplo utilizando após o `echo`;
 
 ### Encapsulamento
 
-texto
+O Encapsulamento protege os atributos e métodos de serem modificados/acessados, organizando quem pode acessar
+esses atributos/métodos.
 
 ```php
 <?php
 
+
+
 ?>
 ```
+
+##### Public
+
+Podemos acessar atributos/métodos definidos como `public` através de objetos, internamente na Classe e através de Herança
+
+##### Protected
+
+Podemos acessar atributos/métodos definidos como `protected` internamente na Classe e através de Herança, mas NÃO diretamente pelo objeto
+
+##### Private
+
+Podemos acessar atributos/métodos definidos como `private` SOMENTE internamente na Classe;
 
 ### Herança
 
