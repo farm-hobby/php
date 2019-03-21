@@ -91,7 +91,7 @@ utilizamos a conversão de tipos em alguns getters por exemplo `:int`
 Instanciando um objeto para visualizar o uso dos métodos
 
 ```php
-<?php 
+<?php
     $gol = new Car();
 
     $gol->setModel('Gol GT');
@@ -120,7 +120,7 @@ instanciar um objeto para invocar tais métodos
 
         public function setNumber($number) {
             $isValid = Document::validateCPF($number);
-            
+
             if (!$isValid) {
                 throw new Exception("Please, informs a valid CPF!");
             }
@@ -133,31 +133,31 @@ instanciar um objeto para invocar tais métodos
             if(empty($cpf)) {
                 return false;
             }
-        
+
             $cpf = preg_match('/[0-9]/', $cpf)?$cpf:0;
 
             $cpf = str_pad($cpf, 11, '0', STR_PAD_LEFT);
-            
-            
+
+
             if (strlen($cpf) != 11) {
                 echo "length";
                 return false;
-            } else if ($cpf == '00000000000' || 
-                $cpf == '11111111111' || 
-                $cpf == '22222222222' || 
-                $cpf == '33333333333' || 
-                $cpf == '44444444444' || 
-                $cpf == '55555555555' || 
-                $cpf == '66666666666' || 
-                $cpf == '77777777777' || 
-                $cpf == '88888888888' || 
+            } else if ($cpf == '00000000000' ||
+                $cpf == '11111111111' ||
+                $cpf == '22222222222' ||
+                $cpf == '33333333333' ||
+                $cpf == '44444444444' ||
+                $cpf == '55555555555' ||
+                $cpf == '66666666666' ||
+                $cpf == '77777777777' ||
+                $cpf == '88888888888' ||
                 $cpf == '99999999999') {
                 return false;
 
-            } else {   
-                
+            } else {
+
                 for ($t = 9; $t < 11; $t++) {
-                    
+
                     for ($d = 0, $c = 0; $c < $t; $c++) {
                         $d += $cpf{$c} * (($t + 1) - $c);
                     }
@@ -166,7 +166,7 @@ instanciar um objeto para invocar tais métodos
                         return false;
                     }
                 }
-        
+
                 return true;
             }
         }
@@ -181,10 +181,111 @@ instanciar um objeto para invocar tais métodos
 
 ### Métodos Mágicos
 
-texto
+São uma espécie de hooks que executam em determinados
+momentos do ciclo de vida de um objeto
+
+##### __construct
+
+É chamado quando o objeto é instanciado com a keyword `new`:
 
 ```php
 <?php
+
+    class Address {
+
+        private $place;
+        private $number;
+        private $city;
+
+        public function __construct($place, $number, $city) {
+            $this->place = $place;
+            $this->number = $number;
+            $this->city = $city;
+        }
+    }
+
+    $address = new Address('Av. Francisco Rodrigues Filho', '2011', 'Mogi das Cruzes');
+
+    var_dump($address);
+
+?>
+```
+
+###### __destruct
+
+É chamado quando o objeto é limpado da memória através de `unset()`, ou
+o fim de execução de algum script não reutilizavél, pode ser utilizado para
+limpar variáveis da memória ou por exemplo se desconectar do banco de dados
+
+```php
+<?php
+
+    class Address {
+
+        private $place;
+        private $number;
+        private $city;
+
+        public function __construct($place, $number, $city) {
+            $this->place = $place;
+            $this->number = $number;
+            $this->city = $city;
+        }
+
+        public function __destruct() {
+            var_dump('DESTROY');
+        }
+    }
+
+    $address = new Address('Av. Francisco Rodrigues Filho', '2011', 'Mogi das Cruzes');
+
+    var_dump($address);
+
+    unset($address);
+
+?>
+```
+
+##### __toString
+
+É a representação em String do objeto quando executado em um contexto que é necessário
+uma string, por exemplo utilizando após o `echo`;
+
+```php
+<?php
+
+    class Address {
+
+        private $place;
+        private $number;
+        private $city;
+
+        public function __construct($place, $number, $city) {
+            $this->place = $place;
+            $this->number = $number;
+            $this->city = $city;
+        }
+
+        public function __destruct() {
+            var_dump('DESTROY');
+        }
+
+        public function __toString() {
+            return $this->place . ', ' . $this->place . ', ' . $this->place;
+        }
+    }
+
+    $address = new Address('Av. Francisco Rodrigues Filho', '2011', 'Mogi das Cruzes');
+
+    var_dump($address);
+
+    echo '<br>';
+
+    echo $address;
+
+    echo '<br>';
+
+    unset($address);
 
 ?>
 ```
