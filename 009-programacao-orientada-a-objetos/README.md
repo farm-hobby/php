@@ -564,6 +564,10 @@ Carrega uma classe indefinida quando é executado com a palavra `new`.
 ?>
 ```
 
+##### Importante
+
+- __autoload: deprecated PHPv7.2, utilizar spl_autoload_register();
+
 ##### Verificação Complexa
 
 Caso precisemos fazer uma busca mais profunda, podemos utilizar as Funções da SPL como
@@ -595,7 +599,7 @@ a `spl_autoload_register(<função anonima>)`;
 
 ### Usando Namespace
 
-texto
+O Namespace permite agrupar classes dentro de diretórios de maneira organizada
 
 ```php
 <?php
