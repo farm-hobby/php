@@ -351,7 +351,7 @@ Utilizando com Herança não temos acesso a propriedades e métodos definidos co
     $me => new Developer(); // Undefined Property Developer::$password
 
 ?>
-
+```
 
 ##### Public
 
