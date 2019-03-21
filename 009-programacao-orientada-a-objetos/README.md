@@ -415,28 +415,135 @@ A Interface determina quais métodos uma Classe obrigatóriamente deve implement
 aqui não informamos o que esses métodos devem fazer, apenas informar qual o método, 
 seus parâmetros e encapsulamento.
 
+Então a `interface` na organização do código, integrar equipes e principalmente
+na integração de APIs de código de 3ºs.
+
 ```php
 <?php
+
+    interface Vehicle {
+        public function accelerate($velocity);
+        public function brake($velocity);
+        public function toggleGear($gear);
+    }
+
+    class Civic implements Vehicle {
+
+    }
+
+    $car = new Civic();
 
 ?>
 ```
 
 ### Classe Abstrata
 
-texto
+A classe Abstrata define métodos, seus encapsulamentos e suas implementações de código, 
+definimos uma classe abstrada com a palavra chave `abstract` antes da palabra `class`.
+
+Está Classe não pode ser instânciada, somente Extendida.
 
 ```php
 <?php
+
+    interface Vehicle {
+        public function accelerate($velocity);
+        public function brake($velocity);
+        public function changeGear($gear);
+    }
+
+    abstract class Automovel implements Vehicle {
+
+        public function accelerate($velocity) {
+            echo 'The vehicle accelerated to the speed of ' . $velocity . 'km/h.';
+        }
+
+        public function brake($velocity) {
+            echo 'The vehicle braked to the speed of ' . $velocity . 'km/h.';
+        }
+
+        public function changeGear($gear) {
+            echo 'The vehicle changed to the ' . $gear . ' gear.';
+        }
+
+    }
+
+    class Fiat extends Automovel {
+
+        public function Trunk(bool $state = false) {
+            $trunkState = $state ? 'open' : 'close';
+            echo 'The vehicle trunk is ' . $trunkState . '!';
+        }
+
+    }
+
+    $car = new Fiat();
+
+    $car->accelerate(150);
+    echo '<br>';
+    $car->trunk();
 
 ?>
 ```
 
 ### Polimorfismo
 
-texto
+Polimorfismo é quando herdamos um método da classe pai, porém a reimplementamos
+para executar de uma forma diferente ou retornar um valor customizado para
+a nova classe em especifico.
 
 ```php
 <?php
+
+    abstract class Animal {
+        public function talk() {
+            return 'talk';
+        }        
+
+        public function move() {
+            return 'move';
+        }        
+    }
+
+    class Cat extends Animal {
+        public function talk() {
+            return 'meow';
+        }
+    }
+
+    class Dog extends Animal {
+        public function talk() {
+            return 'bark';
+        }
+    }
+
+    class Bird extends Animal {
+        public function talk() {
+            return 'sing';
+        }
+
+        public function move() {
+            return 'fly and ' . parent::move();
+        }
+    }
+
+    $cat = new Cat();
+    $dog = new Dog();
+    $bird = new Bird();
+
+    
+    echo $cat->talk() . '<br>';
+    echo $cat->move() . '<br>';
+    
+    echo '---------------------<br>';
+    
+    echo $dog->talk() . '<br>';
+    echo $dog->move() . '<br>';
+    
+    echo '---------------------<br>';
+
+    echo $bird->talk() . '<br>';
+    echo $bird->move() . '<br>';
 
 ?>
 ```
