@@ -550,13 +550,48 @@ a nova classe em especifico.
 
 ### Incluindo classes com Autoload
 
-texto
+Carrega uma classe indefinida quando é executado com a palavra `new`.
 
 ```php
 <?php
 
+    function __autoload($className) {
+        require_once('DelRey.php');
+    }
+
+    $car = new DelRey();
+
 ?>
 ```
+
+##### Verificação Complexa
+
+Caso precisemos fazer uma busca mais profunda, podemos utilizar as Funções da SPL como
+a `spl_autoload_register(<função anonima>)`;
+
+```php
+<?php 
+    function includeClasses($className) {
+        
+        if (file_exists($className . '.php')) {
+            require_once($className . '.php');
+        }
+
+    }
+
+    spl_autoload_register('includeClasses');
+    spl_autoload_register(function ($className) {
+
+        if (file_exists('Abstract' . DIRECTORY_SEPARATOR . $className . '.php')) {
+            require_once($className . '.php');
+        }
+
+    });
+?>
+```
+##### Artigos
+
+- [Fazendo autoload de classes no PHP](https://medium.com/weyes/fazendo-autoload-de-classes-no-php-c802623adeaf)
 
 ### Usando Namespace
 
