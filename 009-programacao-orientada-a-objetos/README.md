@@ -365,19 +365,55 @@ Podemos acessar atributos/métodos definidos como `protected` internamente na Cl
 
 Podemos acessar atributos/métodos definidos como `private` SOMENTE internamente na Classe;
 
+
 ### Herança
 
-texto
+A Herança é quando uma Classe herda atributos e métodos de outra Classe
 
 ```php
 <?php
 
+    class Document {
+        
+        private $number;
+
+        public function getNumber():int {
+            return $this->number;
+        }
+
+        public function setNumber($number) {
+            $this->number = (int)$number;
+        }
+    }
+
+    class CPF  extends Document {
+
+        public function validate():bool {
+            return gettype($this->getNumber()) === 'integer';
+        }
+    }
+
+    $me = new CPF();
+
+    $me->setNumber('39084495888');
+    var_dump($me->validate());
+    var_dump($me->getNumber());
+
 ?>
 ```
 
+##### Métodos Auxiliares
+
+- `get_class()` — Retorna o nome da classe de um objeto
+- `get_parent_class()` - Recupera o nome da classe pai para o objeto ou classe
+- `gettype()` - Obtém o tipo da variável
+- `is_subclass_of()` - Verifica se o objeto tem esta classe como uma de suas classes pai
+
 ### Interface
 
-texto
+A Interface determina quais métodos uma Classe obrigatóriamente deve implementar,
+aqui não informamos o que esses métodos devem fazer, apenas informar qual o método, 
+seus parâmetros e encapsulamento.
 
 ```php
 <?php
