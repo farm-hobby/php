@@ -2,7 +2,12 @@
 
 - [Instalar o MySQL Workbench](#instalar-o-mysql-workbench)
 - [Criando nossa base de dados](#criando-nossa-base-de-dados)
-- [Criando nossa tabela](#criando-nossa-tabela)
+- [Criando nossa tabela com CREATE TABLE](#criando-nossa-tabela-com-create-table)
+- [Inserindo um usuário na tabela com INSERT INTO](#inserindo-um-usuário-na-tabela-com-insert-into)
+- [Buscando registros em nossa tabela com SELECT](#buscando-registros-em-nossa-tabela-com-select)
+- [Atualizando um dado da tabela com UPDATE](#atualizando-um-dado-da-tabela-com-update)
+- [Deletando dados da tabela com DELETE](#deletando-dados-da-tabela-com-delete)
+- [Resetando a tabela com TRUNCATE TABLE](#resetando-a-tabela-com-truncate-table)
 
 
 ### Instalar o MySQL Workbench
@@ -23,7 +28,7 @@ Agora vamos selecionar a database para criarmos a nossa primeira tabela:
 USE dbphp7;
 ```
 
-criando nossa tabela:
+### Criando nossa tabela:
 
 ```sql
 CREATE TABLE tb_usuarios (
