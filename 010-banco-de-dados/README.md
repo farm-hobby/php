@@ -36,15 +36,11 @@ CREATE TABLE tb_usuarios (
 
 ### Inserindo um usuário na tabela com INSERT INTO
 
-Vamos inserir um registro em nossa tabela tb_usuarios
-
 ```sql
 INSERT INTO tb_usuarios (deslogin, dessenha) VALUES ('root', '!@#$%');
 ```
 
 ### Buscando registros em nossa tabela com SELECT
-
-Vamos encontrar nossos registros contidos na tabela tb_usuarios
 
 ```sql
 SELECT * FROM tb_usuarios;
@@ -52,15 +48,11 @@ SELECT * FROM tb_usuarios;
 
 ### Atualizando um dado da tabela com UPDATE
 
-Agora vamos ver como atualizar um dado da nossa tabela tb_usuarios
-
 ```sql
 UPDATE tb_usuarios SET dessenha = '123456' WHERE idusuario = 1;
 ```
 
 ### Deletando dados da tabela com DELETE
-
-Aprenda como deletar registro da tabela com `DELETE`
 
 ```sql
 DELETE FROM tb_usuarios WHERE idusuario = 1;
