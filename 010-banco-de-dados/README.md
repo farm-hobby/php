@@ -1,3 +1,5 @@
+[Voltar](../README.md)
+
 # Sumário
 
 - [Instalar o MySQL Workbench](#instalar-o-mysql-workbench)
@@ -9,7 +11,6 @@
 - [Deletando dados da tabela com DELETE](#deletando-dados-da-tabela-com-delete)
 - [Resetando a tabela com TRUNCATE TABLE](#resetando-a-tabela-com-truncate-table)
 
-[Voltar](../README.md);
 
 ### Instalar o MySQL Workbench
 
