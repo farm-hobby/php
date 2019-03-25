@@ -40,8 +40,7 @@ Uma `Classe` é um conjunto de `atributos` e `métodos`, a partir da **Classe**
 
 ### Atributos e Métodos
 
-Criando atributos privados com a palavra chave `private`, onde os mesmos não podem ser acessados diretamente do objeto de forma pública, somente através de métodos que chamados de Getters/Setters,
-utilizamos a conversão de tipos em alguns getters por exemplo `:int`
+Criando atributos privados com a palavra chave `private`, onde os mesmos não podem ser acessados diretamente do objeto de forma pública, somente através de métodos que chamados de Getters/Setters, utilizamos a conversão de tipos em alguns getters por exemplo `:int`
 
 ```php
 <?php
@@ -340,7 +339,7 @@ Utilizando com Herança não temos acesso a propriedades e métodos definidos co
     }
 
     class Developer extends Person {
-        
+
         public getInfo() {
             echo $this->name . '<br>';
             echo $this->year . '<br>';
@@ -374,7 +373,7 @@ A Herança é quando uma Classe herda atributos e métodos de outra Classe
 <?php
 
     class Document {
-        
+
         private $number;
 
         public function getNumber():int {
@@ -412,7 +411,7 @@ A Herança é quando uma Classe herda atributos e métodos de outra Classe
 ### Interface
 
 A Interface determina quais métodos uma Classe obrigatóriamente deve implementar,
-aqui não informamos o que esses métodos devem fazer, apenas informar qual o método, 
+aqui não informamos o que esses métodos devem fazer, apenas informar qual o método,
 seus parâmetros e encapsulamento.
 
 Então a `interface` na organização do código, integrar equipes e principalmente
@@ -438,7 +437,7 @@ na integração de APIs de código de 3ºs.
 
 ### Classe Abstrata
 
-A classe Abstrata define métodos, seus encapsulamentos e suas implementações de código, 
+A classe Abstrata define métodos, seus encapsulamentos e suas implementações de código,
 definimos uma classe abstrada com a palavra chave `abstract` antes da palabra `class`.
 
 Está Classe não pode ser instânciada, somente Extendida.
@@ -498,11 +497,11 @@ a nova classe em especifico.
     abstract class Animal {
         public function talk() {
             return 'talk';
-        }        
+        }
 
         public function move() {
             return 'move';
-        }        
+        }
     }
 
     class Cat extends Animal {
@@ -531,15 +530,15 @@ a nova classe em especifico.
     $dog = new Dog();
     $bird = new Bird();
 
-    
+
     echo $cat->talk() . '<br>';
     echo $cat->move() . '<br>';
-    
+
     echo '---------------------<br>';
-    
+
     echo $dog->talk() . '<br>';
     echo $dog->move() . '<br>';
-    
+
     echo '---------------------<br>';
 
     echo $bird->talk() . '<br>';
@@ -574,9 +573,9 @@ Caso precisemos fazer uma busca mais profunda, podemos utilizar as Funções da 
 a `spl_autoload_register(<função anonima>)`;
 
 ```php
-<?php 
+<?php
     function includeClasses($className) {
-        
+
         if (file_exists($className . '.php')) {
             require_once($className . '.php');
         }
@@ -601,8 +600,31 @@ a `spl_autoload_register(<função anonima>)`;
 
 O Namespace permite agrupar classes dentro de diretórios de maneira organizada
 
+##### namespace
+
+Para criar um namespace devemos organizar nossas classes e arquivos em pastas,
+seguindo o padrão de nomenclatura CamelCase, por exemplo, temos o namespace `Client` e
+a classe `Register`:
+
+
 ```php
 <?php
+    namespace Client;
 
+    class Register extends \Register {}
+?>
+```
+
+##### use
+
+O `use` é utilizado para utilizamos e/ou sobrescrevermos uma Classe existente,
+no nosso exemplo temos uma classe `Register` na pasta "Classes" e outra especifica para Clientes
+na sub pasta "Client", então temos que utilizar o `use` para usar a mesma:
+
+```php
+<?php
+    use Client\Register;
+
+    $register = new Register();
 ?>
 ```
