@@ -65,3 +65,9 @@ Aprenda como deletar registro da tabela com `DELETE`
 ```sql
 DELETE FROM tb_usuarios WHERE idusuario = 1;
 ```
+
+### Resetando a tabela com TRUNCATE TABLE
+
+```sql
+TRUNCATE TABLE tb_usuarios;
+```
