@@ -1,3 +1,5 @@
+[Home](../README.md) / Funções
+
 # Sumário
 
 - [Criando funções de usuário](#criando-funções-de-usuario)

@@ -1,3 +1,5 @@
+[Home](../README.md) / Data e Hora
+
 # Sumário
 
 - [Funções Date e a Função Time](#funções-date-e-a-função-time)
