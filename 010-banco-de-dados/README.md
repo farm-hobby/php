@@ -10,6 +10,9 @@
 - [Resetando a tabela com TRUNCATE TABLE](#resetando-a-tabela-com-truncate-table)
 
 
+Voltar para a [HOME](../README.md);
+
+
 ### Instalar o MySQL Workbench
 
 Para consfigurar nosso banco de dados vamos utilizar o MySQL Workbench, mas para isso devemos instala-lo
