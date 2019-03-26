@@ -1,10 +1,17 @@
 <?php 
 
+    // $DB_CONFIG = [
+    //     'host' => 'localhost',
+    //     'user' => 'root',
+    //     'password' => '',
+    //     'database' => 'dbphp7'
+    // ];
+
     $connection = new mysqli(
-        'localhost',
-        'root',
-        '',
-        'dbphp7'
+        $DB_CONFIG->host,
+        $DB_CONFIG->user,
+        $DB_CONFIG->password,
+        $DB_CONFIG->database,
     );
 
     if ($connection->connect_error) {
