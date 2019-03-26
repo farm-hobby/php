@@ -62,7 +62,7 @@ os valores através de outro método, que veremos no tópico seguinte:
 O mysqli precisa que os valores que iremos vincular com nossa query
 sejam referências, pois o método `bind_param` foi definido desse modo (&param).
 
-O método `bin_param` recebe no primeiro parametro os tipos dos valores, 
+O método `$connection->bind_param` recebe no primeiro parametro os tipos dos valores, 
 os demais parametros são os valores a serem incrementados na nossa SQL Query:
 
 Legenda dos tipos:
