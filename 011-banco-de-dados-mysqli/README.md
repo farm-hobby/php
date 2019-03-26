@@ -39,7 +39,7 @@ seguinte forma:
 ?>
 ```
 
-### Definindo query SQL
+### Definindo SQL Query
 
 Depois que realizamos uma conexão bem sucedida, podemos criar 
 nossa SQL Query e preparar para trabalhar com nossa database, através do
