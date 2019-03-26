@@ -1,4 +1,4 @@
-# php-daily-book
+# PHP
 
 A personal daily book with the purpose to track my learning
 
