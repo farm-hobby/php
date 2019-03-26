@@ -1,8 +1,8 @@
-[Home](../README.md) / Banco de dados
+[Home](../README.md) / Banco de dados - Básico de SQL e mySQL Workbench
 
 # Sumário
 
-- [Instalar o MySQL Workbench](#instalar-o-mysql-workbench)
+- [Instalar o mySQL Workbench](#instalar-o-mysql-workbench)
 - [Criando nossa base de dados](#criando-nossa-base-de-dados)
 - [Criando nossa tabela com CREATE TABLE](#criando-nossa-tabela-com-create-table)
 - [Inserindo um usuário na tabela com INSERT INTO](#inserindo-um-usuário-na-tabela-com-insert-into)
@@ -12,7 +12,7 @@
 - [Resetando a tabela com TRUNCATE TABLE](#resetando-a-tabela-com-truncate-table)
 
 
-### Instalar o MySQL Workbench
+### Instalar o mySQL Workbench
 
 Para consfigurar nosso banco de dados vamos utilizar o MySQL Workbench, mas para isso devemos instala-lo
 através do link: [https://dev.mysql.com/downloads/workbench/](https://dev.mysql.com/downloads/workbench/)
@@ -22,7 +22,7 @@ através do link: [https://dev.mysql.com/downloads/workbench/](https://dev.mysql
 O MySQL Workbench possui uma opção no menu para criar `schema` personalizado, então vamos criar um novo esquema
 chamado `dbphp7`.
 
-### Criando nossa tabela com CREATE TABLE
+### Selecionando nossa base de dados
 
 Agora vamos selecionar a database para criarmos a nossa primeira tabela:
 
@@ -30,7 +30,7 @@ Agora vamos selecionar a database para criarmos a nossa primeira tabela:
 USE dbphp7;
 ```
 
-### Criando nossa tabela:
+### Criando nossa tabela com CREATE TABLE
 
 ```sql
 CREATE TABLE tb_usuarios (

@@ -12,4 +12,7 @@ Estudo pessoal sobre PHP, criei este resumo para revisar e catalogar meu aprendi
 - [Trabalhando com Date e Hora no PHP](008-trabalhando-com-date-e-hora-no-php/README.md)
 - [Programação Orientada a Objetos com PHP](009-programacao-orientada-a-objetos/README.md)
 - Banco de Dados
-    - [Basico de SQL e mySQL Workbench](010-banco-de-dados/README.md)
+    - [Básico de SQL e mySQL Workbench](010-banco-de-dados-basico-de-sql-e-mysqlworkbench/README.md)
+    - [Conectando com mySQLi](011-banco-de-dados-mysqli-e-php/README.md)
+    - [Conectando com PDO](012-banco-de-dados-pdo/README.md)
+    - [Data Access Object e PDO](013-banco-de-dados-dao-e-pdo/README.md)

@@ -6,7 +6,7 @@
         protected $year = 45;
         private $password = 'ahdb58#$%';
 
-        public getInfo() {
+        public function getInfo() {
             echo $this->name . '<br>';
             echo $this->year . '<br>';
             echo $this->password . '<br>';
