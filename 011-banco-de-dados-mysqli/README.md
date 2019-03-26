@@ -43,7 +43,7 @@ seguinte forma:
 
 Depois que realizamos uma conexão bem sucedida, podemos criar 
 nossa SQL Query e preparar para trabalhar com nossa database, através do
-método `prepare()` que nossa conexão possui:
+método `$connection->prepare()` que nossa conexão possui:
 
 Perceba que nos valores inserimos exclamações, isso porque devemos vincular
 os valores através de outro método, que veremos no tópico seguinte:
@@ -60,7 +60,7 @@ os valores através de outro método, que veremos no tópico seguinte:
 ### Vinculando valores por referência
 
 O mysqli precisa que os valores que iremos vincular com nossa query
-sejam referências, pois o método `bind_param` foi definido desse modo (&param).
+sejam referências, pois o método `$connection->bind_param` foi definido desse modo (&param).
 
 O método `$connection->bind_param` recebe no primeiro parametro os tipos dos valores, 
 os demais parametros são os valores a serem incrementados na nossa SQL Query:
