@@ -1,6 +1,6 @@
 # PHP
 
-A personal daily book with the purpose to track my learning
+Estudo pessoal sobre PHP, criei este resumo para revisar e catalogar meu aprendizado, espero que ajude alguém:
 
 - [Introdução](001-introducao/README.md)
 - [Conhecendo a linguagem PHP](002-conhecendo-a-linguagem-php/README.md)
