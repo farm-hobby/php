@@ -78,6 +78,49 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
 ```
 
 ### Inserindo dados na database
+
+```php
+<?php 
+
+    /* 
+        Após conexão com banco instanciamos a variavel $connection 
+    */
+    
+    $statement = $connection->prepare(
+        'INSERT INTO tb_usuarios (deslogin, dessenha) VALUES (:LOGIN, :PASSWORD)'
+    );
+
+    $login = 'test@test.com.br';
+    $password = '12345678';
+
+    $statement->bindParam(":LOGIN", $login);
+    $statement->bindParam(":PASSWORD", $password);
+
+    $statement->execute();
+
+?>
+```
+
 ### Alterando dados da database
+
+```php
+<?php 
+
+?>
+```
+
 ### Apagando dados na database
+
+```php
+<?php 
+
+?>
+```
+
 ### Usando transações
+
+```php
+<?php 
+
+?>
+```
