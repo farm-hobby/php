@@ -133,7 +133,22 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
 
 ```php
 <?php 
+    
+    /* 
+        Após conexão com banco instanciamos a variavel $connection 
+    */
 
+    $statement = $connection->prepare(
+        'DELETE FROM tb_usuarios WHERE idusuario = :ID'
+    );
+
+    $id = 1;
+
+    $statement->bindParam(":ID", $id);
+
+    $statement->execute();
+
+    echo "Deletado!";
 ?>
 ```
 
