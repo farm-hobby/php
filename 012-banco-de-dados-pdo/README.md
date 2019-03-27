@@ -85,7 +85,7 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
     /* 
         Após conexão com banco instanciamos a variavel $connection 
     */
-    
+
     $statement = $connection->prepare(
         'INSERT INTO tb_usuarios (deslogin, dessenha) VALUES (:LOGIN, :PASSWORD)'
     );
@@ -98,6 +98,8 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
 
     $statement->execute();
 
+    echo "Inserido!";
+
 ?>
 ```
 
@@ -105,7 +107,25 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
 
 ```php
 <?php 
+    /* 
+        Após conexão com banco instanciamos a variavel $connection 
+    */
 
+    $statement = $connection->prepare(
+        'UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID'
+    );
+
+    $login = 'mega@test.com.br';
+    $password = 'test1000';
+    $id = 3;
+
+    $statement->bindParam(":LOGIN", $login);
+    $statement->bindParam(":PASSWORD", $password);
+    $statement->bindParam(":ID", $id);
+
+    $statement->execute();
+
+    echo "Atualizado!";
 ?>
 ```
 
