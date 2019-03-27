@@ -61,7 +61,7 @@ para recebermos um Array Associativo como resposta.
 
 ### Iterando sob os resultados
 
-Com o PDO sabemos exatamente a quantidade de ítens retornados,
+Com a Classe `PDO` sabemos exatamente a quantidade de ítens retornados,
 e com isso conseguimos iterar sobre os dados com um `foreach`;
 
 ```php
