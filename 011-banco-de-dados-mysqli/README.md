@@ -2,7 +2,13 @@
 
 # Sumário
 
-- [title](#title)
+- [Criando uma conexão com o Banco de Dados](#criando-uma-conexão-com-o-banco-de-dados)
+- [Verificando se ocorreu algum erro](#verificando-se-ocorreu-algum-erro)
+- [Definindo SQL Query](#definindo-sql-query)
+- [Vinculando valores por referência](#vinculando-valores-por-referência)
+- [Executando nossa Query](#executando-nossa-query)
+- [Encerrando conexão com a database](#encerrando-conexão-com-a-database)
+- [Realizando consultas na database](#realizando-consultas-na-database)
 
 
 ### Criando uma conexão com o Banco de Dados
