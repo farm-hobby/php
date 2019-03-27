@@ -7,7 +7,10 @@
 - [Executando a Query](#executando-a-query)
 - [Resgatando os registros solicitados](#resgatando-os-registros-solicitados)
 - [Iterando sob os resultados](#iterando-sob-os-resultados)
-
+- [Inserindo dados na database](#inserindo-dados-na-database)
+- [Alterando dados da database](#alterando-dados-da-database)
+- [Apagando dados na database](#apagando-dados-na-database)
+- [Usando transações](#usando-transações)
 
 ### Iniciando conexão com PDO
 
@@ -73,3 +76,8 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
         echo '=================================================<br>';
     }
 ```
+
+### Inserindo dados na database
+### Alterando dados da database
+### Apagando dados na database
+### Usando transações
