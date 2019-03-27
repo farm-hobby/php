@@ -2,7 +2,11 @@
 
 # Sumário
 
-- [title](#title)
+- [Iniciando conexão com PDO](#iniciando-conexão-com-pdo)
+- [Preparando uma Query](#preparando-uma-query)
+- [Executando a Query](#executando-a-query)
+- [Resgatando os registros solicitados](#resgatando-os-registros-solicitados)
+- [Iterando sob os resultados](#iterando-sob-os-resultados)
 
 
 ### Iniciando conexão com PDO
