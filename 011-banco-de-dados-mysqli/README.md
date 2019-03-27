@@ -18,7 +18,6 @@ Primeiro devemos configurar nossa conexão com as seguintes informações,
         '',
         'dbphp7'
     );
-
 ?>
 ```
 
@@ -101,3 +100,30 @@ Legenda dos tipos:
 
 ?>
 ```
+
+### Realizando consultas na database
+
+Após conectarmos na database e não houver nenhum erro de conexão,
+vamos utilizar o método `$connect->query()`, onde informaremos a nossa
+SQL Query para realizar uma consulta e retornar os valores que desejamos.
+
+O método `query` nos retorno um outro objeto com os dados da database e 
+alguns métodos para tratamento dos mesmos, como o `fetch_array` e `fetch_assoc`,
+que retornam ou como arrays ou como arrays associativos, na documentação encontramos
+mais métodos e informaçõe sobre [https://www.php.net/manual/pt_BR/class.mysqli-result.php](https://bit.ly/2U1PzRe).
+
+Veja que utilizamos o `while`, pois não sabemos quantos registros (rows) 
+retornaremos da database, verificando se há algum retorno validando no próprio `while`.
+
+```php
+<?php 
+    
+    $result = $connection->query('SELECT * FROM tb_usuarios ORDER BY deslogin');    
+
+    while($row = $result->fetch_assoc()) {
+        var_dump($row);
+    }
+?>
+```
+
+
