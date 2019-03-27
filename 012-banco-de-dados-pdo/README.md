@@ -12,8 +12,8 @@
 ### Iniciando conexão com PDO
 
 Para Conectar com PDO devemos informar as seguintes informações, uma string
-informando qual o tipo de banco de dados vamos utilizar separdo por dois pontos (:) e o nome da nossa database
-mais o host separado por ponto e virgula (;) `mysql:dbname=dbphp7;host=localhost`, `usuário` e a `senha`.
+informando qual o tipo de banco de dados vamos utilizar separdo por dois pontos **:** e o nome da nossa database
+mais o host separado por ponto e virgula **;** `mysql:dbname=dbphp7;host=localhost`, `usuário` e a `senha`.
 
 ```php
 <?php
