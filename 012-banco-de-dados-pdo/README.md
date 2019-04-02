@@ -154,8 +154,64 @@ e com isso conseguimos iterar sobre os dados com um `foreach`;
 
 ### Usando transações
 
+As transações fornecem maior controle sobre a manipulação do banco de dados,
+cancelando ações e realizando rollbacks quando algo sai errado.
+
+visão geral:
+
 ```php
 <?php 
 
+    /* 
+        Após conexão com banco instanciamos a variavel $connection 
+    */
+
+
+    $connection->beginTransaction();
+
+    $statement = $connection->prepare(
+        'DELETE FROM tb_usuarios WHERE idusuarios = ?'
+    );
+
+    $id = 2;
+
+    $statement->execute([
+        $id
+    ]);
+
+    // $connection->rollback();
+    $connection->commit();
+
+    echo "Deleted!";
+?>
+```
+
+##### Iniciando uma transação
+
+Iniciamos a transação antes de executarmos nossa Query
+
+```php
+<?php 
+    $connection->beginTransaction();
+?>
+```
+
+##### Realizando rollback
+
+Com o rollback podemos voltar ao estado anterior da Query executada.
+
+```php
+<?php 
+    $connection->rollback();
+?>
+```
+
+##### Commitando os dados
+
+Commitando os dados, afirmamos que tudo esta correto e a alteração pode ser executada
+
+```php
+<?php 
+    $connection->commit();
 ?>
 ```
