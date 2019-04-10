@@ -41,19 +41,20 @@
             $this->dateRegister = $value;
         }
 
+        public function setData($data) {
+            $this->setId($data['idusuarios']);
+            $this->setLogin($data['deslogin']);
+            $this->setPassword($data['dessenha']);
+            $this->setDateRegister(new DateTime($data['dtcadastro']));
+        }
+
         public function loadById($id) {
             $sql = new SQL();
 
             $results = $sql->select('SELECT * FROM tb_usuarios WHERE idusuario = :ID', [ ':ID' => $id ]);
 
             if (count($results) > 0) {
-
-                $row = $results[0];
-
-                $this->setId($row['idusuario']);
-                $this->setLogin($row['deslogin']);
-                $this->setPassword($row['dessenha']);
-                $this->setDateRegister(new DateTime($row['dtcadastro']));
+                $this->setData($results[0]);
             }
         }
 
@@ -63,8 +64,31 @@
             return $sql->select('SELECT * FROM tb_usuarios');
         }
 
-        public function login() {
+        public static function search($login) {
+            $sql = new SQL();
 
+            return $sql->select(
+                'SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH ORDER BY deslogin',
+                [':SEARCH' => "%$login%"]
+            );
+        }
+
+        public function login($login, $password) {
+            $sql = new SQL();
+
+            $results = $sql->select(
+                'SELECT * FROM tb_usuarios WHERE deslogin = :LOGIN and dessenha = :PASSWORD',
+                [
+                    ':LOGIN' => $login,
+                    ':PASSWORD' => $password
+                ]
+            );
+
+            if (count($results) > 0) {
+                $this->setData($results[0]);
+            } else {
+                throw new Exception('Login e/ou Senha inválidos!');
+            }
         }
 
         public function __toString() {
