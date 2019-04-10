@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     class User {
 
@@ -40,28 +40,31 @@
         public function setDateRegister($value) {
             $this->dateRegister = $value;
         }
-        
+
         public function loadById($id) {
             $sql = new SQL();
 
             $results = $sql->select('SELECT * FROM tb_usuarios WHERE idusuario = :ID', [ ':ID' => $id ]);
 
-            if(count($results) > 0) {
-                
-                foreach($results as $row) {
-                    $this->setId($row['idusuario']);
-                    $this->setLogin($row['deslogin']);
-                    $this->setPassword($row['dessenha']);
-                    $this->setDateRegister(new DateTime($row['dtcadastro']));
-                }
+            if (count($results) > 0) {
 
-            };
+                $row = $results[0];
+
+                $this->setId($row['idusuario']);
+                $this->setLogin($row['deslogin']);
+                $this->setPassword($row['dessenha']);
+                $this->setDateRegister(new DateTime($row['dtcadastro']));
+            }
         }
 
         public static function getList() {
             $sql = new SQL();
 
             return $sql->select('SELECT * FROM tb_usuarios');
+        }
+
+        public function login() {
+
         }
 
         public function __toString() {

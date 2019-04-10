@@ -4,10 +4,8 @@
 
     $user = new User();
 
-    $user->loadById(1);
+    // $user->loadById(1);
 
-    // echo $user;
-    // echo '<br>';
-    echo json_encode(User::getList());
+    // echo json_encode(User::getList());
 
 ?>
